@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="test"/>
+	<classpathentry kind="lib" path="D:/kylld/Downloads/sqljdbc_8.4.1.0_ptb.zip"/>
+	<classpathentry kind="lib" path="D:/kylld/eclipse/sqljdbc_8.4.1.0_ptb.zip"/>
+	<classpathentry kind="lib" path="D:/kylld/eclipse/sqljdbc_8.4/ptb/mssql-jdbc-8.4.1.jre8.jar"/>
+	<classpathentry kind="output" path="build/classes"/>
+</classpath>
