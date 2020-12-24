@@ -7,6 +7,6 @@
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="test"/>
-	<classpathentry kind="lib" path="D:/kylld/eclipse/sqljdbc_8.4/ptb/mssql-jdbc-8.4.1.jre8.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Thiago/eclipse-workspace/sqljdbc_8.4/ptb/mssql-jdbc-8.4.1.jre8.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

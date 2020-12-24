@@ -9,6 +9,7 @@ import Classes.Emprestimo;
 import Controller.ControllerEmprestimo;
 import Controller.ControllerObra;
 import Controller.ControllerUsuario;
+import Exception.DataPrevistaInvalida;
 import Modelo.Obra;
 import Modelo.Usuarios;
 import java.awt.Point;
@@ -385,11 +386,16 @@ public class TelaAddEmprestimo extends javax.swing.JFrame {
                     }
                     break;
                 }
-            } 
+            }
+                
                 arrayU=cobre.Listar();
+                try {
             for (Usuarios aux : arrayU) {
                 if(aux.getCPF().equals(cpf)){
                     if (aux.getDivida()==0) {
+                    	if(Calendar.getInstance().compareTo(dtPrevista)>0){
+                    		throw new DataPrevistaInvalida("A data atual n�o pode ser maior que a data prevista!");
+                    	}
                         dtPrevista.add(Calendar.DATE,aux.getDias());
                         Emprestimo e = new Emprestimo(aux.getNome(), Admin, (String)TabelaObra.getValueAt(TabelaObra.getSelectedRow(),0), dtPrevista, null, Calendar.getInstance());
                         ce.Adcionar(e);
@@ -397,7 +403,8 @@ public class TelaAddEmprestimo extends javax.swing.JFrame {
                     }
                 }
             }
-            
+                } catch (DataPrevistaInvalida dpi) {
+					System.out.println(dpi.getMessage());			}
             }else{
                 JOptionPane.showMessageDialog(null,"Cópias indisponíveis","Erro",JOptionPane.WARNING_MESSAGE);
             }
