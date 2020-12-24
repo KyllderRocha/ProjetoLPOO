@@ -22,7 +22,7 @@ public class Conexao {
     public static Connection getConnection() {
         try {
         	String ConectionString="jdbc:sqlserver://lpo-serve.database.windows.net:1433;database=lpo-biblioteca;user=kyllder-admin@lpo-serve;password={your_password_here};encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;";
-            Connection con = DriverManager.getConnection("jdbc:sqlserver://lpo-serve.database.windows.net:1433;database=lpo-biblioteca;user=kyllder-admin@lpo-serve;password=lpoteste@123;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30");
+            Connection con = DriverManager.getConnection("jdbc:sqlserver://lpoo-projeto.database.windows.net:1433;database=lpooteste;user=Thiago@lpoo-projeto;password=Dt13122018;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;");
             return con;
         } catch (SQLException e) {
             throw new RuntimeException(e);

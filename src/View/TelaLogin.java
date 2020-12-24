@@ -231,7 +231,7 @@ public class TelaLogin extends javax.swing.JDialog {
     private void respSenhaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_respSenhaKeyPressed
         // TODO add your handling code here:
         if (evt.getKeyCode()== KeyEvent.VK_ENTER) {
-             a= ca.Verificar(respAdmin.getText(),respSenha.getText());
+            a= ca.Verificar(respAdmin.getText(),respSenha.getText());
         if (a.getNome()!= "n") {
             JOptionPane.showMessageDialog(null,"Bem Vindo");
                     
